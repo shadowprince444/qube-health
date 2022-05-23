@@ -9,7 +9,7 @@ import 'package:qubehealth/app/utils/functions/util_functions.dart';
 import 'package:qubehealth/app/utils/screen_utils/size_config.dart';
 import 'package:qubehealth/app/utils/screen_utils/widgets/build_snack_bar_enum.dart';
 
-class HomescreenController extends GetxController {
+class FeelingHistoryScreenViewController extends GetxController {
   final FeelingsHistoryRepo _feelingRepo = FeelingsHistoryRepo();
   final InternetConnectivityController scaffoldController = Get.find<InternetConnectivityController>();
 
@@ -35,7 +35,7 @@ class HomescreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    userId = 3206161992;
+    userId = int.parse(Get.parameters["userId"] ?? "0");
 
     selectedDate = DateTime(2022, 4, 15).obs;
     minDate = selectedDate.value
@@ -56,7 +56,7 @@ class HomescreenController extends GetxController {
 
   @override
   void onClose() {
-    scaffoldController.dispose();
+    scrollController.dispose();
   }
 
   fetchFeelingsHistory() async {

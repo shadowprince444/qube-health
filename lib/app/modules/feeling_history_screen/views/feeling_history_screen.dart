@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:qubehealth/app/data/models/feeling_response_model.dart';
-import 'package:qubehealth/app/modules/homescreen/views/widgets/animated_horizontal_calender.dart';
-import 'package:qubehealth/app/modules/homescreen/views/widgets/feeling_icon_widget.dart';
-import 'package:qubehealth/app/modules/homescreen/views/widgets/monthly_feeling_percentage_indication_widget.dart';
+import 'package:qubehealth/app/modules/feeling_history_screen/views/widgets/animated_horizontal_calender.dart';
+import 'package:qubehealth/app/modules/feeling_history_screen/views/widgets/feeling_icon_widget.dart';
+import 'package:qubehealth/app/modules/feeling_history_screen/views/widgets/monthly_feeling_percentage_indication_widget.dart';
 import 'package:qubehealth/app/utils/functions/util_functions.dart';
 import 'package:qubehealth/app/utils/screen_utils/size_config.dart';
 import 'package:qubehealth/app/utils/screen_utils/widgets/app_custom_scaffold.dart';
@@ -15,8 +15,8 @@ import 'package:qubehealth/app/utils/theme/app_theme.dart';
 
 import '../controllers/homescreen_controller.dart';
 
-class HomeScreenView extends GetView<HomescreenController> {
-  const HomeScreenView({Key? key}) : super(key: key);
+class FeelingHistoryScreenView extends GetView<FeelingHistoryScreenViewController> {
+  const FeelingHistoryScreenView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class HomeScreenView extends GetView<HomescreenController> {
                       const VSpace(10),
                       const CustomDivider(.2),
                       SizedBox(
-                        child: GetBuilder<HomescreenController>(builder: (controller) {
+                        child: GetBuilder<FeelingHistoryScreenViewController>(builder: (controller) {
                           final list = controller.feelingHistoryModel?.data?.feelingList ?? [];
                           if (list.isNotEmpty) {
                             return Padding(
@@ -184,14 +184,14 @@ class HomeScreenView extends GetView<HomescreenController> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const VSpace(32),
-                              GetBuilder<HomescreenController>(builder: (controller) {
+                              GetBuilder<FeelingHistoryScreenViewController>(builder: (controller) {
                                 return Text(
                                   controller.feelingHistoryModel?.data?.videoArr.first.title ?? "",
                                   style: AppTheme.textThemes.headline3,
                                 );
                               }),
-                              VSpace(10),
-                              GetBuilder<HomescreenController>(builder: (controller) {
+                              const VSpace(10),
+                              GetBuilder<FeelingHistoryScreenViewController>(builder: (controller) {
                                 return Text(
                                   "${controller.feelingHistoryModel?.data?.videoArr.first.description}",
                                   style: AppTheme.textThemes.bodyText1.copyWith(
@@ -201,11 +201,11 @@ class HomeScreenView extends GetView<HomescreenController> {
                                       )),
                                 );
                               }),
-                              VSpace(10),
+                              const VSpace(10),
                               SizedBox(
                                 height: 128.vdp(),
                                 width: size.width - 40.hdp(),
-                                child: GetBuilder<HomescreenController>(builder: (controller) {
+                                child: GetBuilder<FeelingHistoryScreenViewController>(builder: (controller) {
                                   return PageView(
                                     pageSnapping: true,
                                     onPageChanged: (index) {},
@@ -321,7 +321,9 @@ class HomeScreenView extends GetView<HomescreenController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Get.back();
+                  },
                   child: Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20.vdp(),

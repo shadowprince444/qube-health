@@ -3,10 +3,14 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const HOMESCREEN = _Paths.HOMESCREEN;
+  static const feelingHistoryScreen = _Paths.feelingHistoryScreen;
+  static const home = _Paths.home;
+  static const secondScreen = _Paths.secondScreen;
 }
 
 abstract class _Paths {
   _Paths._();
-  static const HOMESCREEN = '/homescreen';
+  static const feelingHistoryScreen = '/feeling-history';
+  static const home = '/home';
+  static const secondScreen = '/second-screen';
 }

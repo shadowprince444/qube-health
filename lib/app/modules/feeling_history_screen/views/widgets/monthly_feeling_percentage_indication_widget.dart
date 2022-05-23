@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qubehealth/app/data/models/feeling_response_model.dart';
-import 'package:qubehealth/app/modules/homescreen/views/widgets/feeling_icon_widget.dart';
+import 'package:qubehealth/app/modules/feeling_history_screen/views/widgets/feeling_icon_widget.dart';
 import 'package:qubehealth/app/utils/screen_utils/size_config.dart';
 import 'package:qubehealth/app/utils/screen_utils/widgets/spacing_widgets.dart';
 import 'package:qubehealth/app/utils/theme/app_theme.dart';

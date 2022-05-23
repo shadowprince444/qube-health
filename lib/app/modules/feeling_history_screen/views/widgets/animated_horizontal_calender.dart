@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:qubehealth/app/modules/homescreen/controllers/homescreen_controller.dart';
+import 'package:qubehealth/app/modules/feeling_history_screen/controllers/homescreen_controller.dart';
 import 'package:qubehealth/app/utils/functions/util_functions.dart';
 import 'package:qubehealth/app/utils/screen_utils/size_config.dart';
 import 'package:qubehealth/app/utils/screen_utils/widgets/spacing_widgets.dart';
@@ -12,7 +12,7 @@ import 'package:qubehealth/app/utils/theme/app_theme.dart';
 class AnimatedHorizontalCalendar extends StatelessWidget {
   final Color textColor;
   final Color nonSelectedTextColor;
-  final HomescreenController controller;
+  final FeelingHistoryScreenViewController controller;
 
   // final Function? onDateSelected;
 
