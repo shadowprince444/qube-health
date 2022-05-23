@@ -1,0 +1,27 @@
+{"status":"200",
+  "data":{
+    "feeling_percentage":{
+      "Happy":"0",
+      "Sad":"0",
+      "Energetic":"0",
+      "Calm":"0",
+      "Angry":"0",
+      "Bored":"0"
+    },
+    "feeling_list":[
+      {
+        "user_feeling_id":"583",
+        "feeling_id":"6",
+        "feeling_name":"Bored",
+        "submit_time":"2022-04-15 12:56:58"
+      }
+    ],
+    "video_arr":[
+      {
+        "title":"Related to Health",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "youtube_url":"https:\/\/www.youtube.com\/watch?v=ml6cT4AZdqI"
+      }
+    ]
+  }
+}
