@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
-import '../controllers/homescreen_controller.dart';
+import '../controllers/feelings_history_screen_controller.dart';
 
-class HomescreenBinding extends Bindings {
+class FeelingsHistoryScreenBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<FeelingHistoryScreenViewController>(

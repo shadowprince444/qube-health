@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../modules/feeling_history_screen/bindings/homescreen_binding.dart';
+import '../modules/feeling_history_screen/bindings/feelings_history_screen_binding.dart';
 import '../modules/feeling_history_screen/views/feeling_history_screen.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -18,7 +18,7 @@ class AppPages {
     GetPage(
       name: _Paths.feelingHistoryScreen,
       page: () => FeelingHistoryScreenView(),
-      binding: HomescreenBinding(),
+      binding: FeelingsHistoryScreenBinding(),
     ),
     GetPage(
       name: _Paths.home,

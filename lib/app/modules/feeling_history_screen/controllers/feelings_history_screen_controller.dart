@@ -57,6 +57,7 @@ class FeelingHistoryScreenViewController extends GetxController {
   @override
   void onClose() {
     scrollController.dispose();
+    pageController.dispose();
   }
 
   fetchFeelingsHistory() async {
@@ -103,7 +104,7 @@ class FeelingHistoryScreenViewController extends GetxController {
     scaffoldController.setUnloading();
   }
 
-  onVideoSwiped(int index) {
+  onVideoChanged(int index) {
     selectedVideoIndex = index;
     update();
   }
